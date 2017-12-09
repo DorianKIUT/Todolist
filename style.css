@@ -1,0 +1,55 @@
+
+body {
+
+	background-image: url("img/papier_peint.jpg");
+	font-family: georgia, serif;
+	font-weight: bold;
+	text-align:center;
+	
+}
+	
+li {
+
+	list-style-type: disc;
+	height: auto;
+	font-size: 100%;
+	list-style:none;
+}
+
+h1 {
+
+	margin-top: 5px;
+	margin-left: auto;
+    margin-right: auto;
+    font-family: georgia, serif;
+    font-weight: bold
+}
+
+.conteneur {
+
+
+	background-color: #E7ECF0;
+	border-radius:20px;
+	border: 3px solid #878D89;
+	margin-left: 25%;
+	max-width:50%;
+	opacity: 0.9;
+	padding-top: 1.5%;
+	padding-bottom: 0px;
+	
+
+}
+
+p {
+	font-style: italic;
+} 
+
+ #img {
+ 
+ 	max-width: 4%;
+	height: auto;
+	position: relative;
+	bottom: -9px;
+
+	
+}
