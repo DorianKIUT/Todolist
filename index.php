@@ -1,5 +1,7 @@
 
 <?php 
+require 'vendor/mustache/mustache/src/Mustache/Autoloader.php';
+Mustache_Autoloader::register();
 // On met en variables les informations de connexion 
 $hote = '127.0.0.1'; // Adresse du serveur 
 $user = 'root'; // Login 
