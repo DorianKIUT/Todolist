@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <title>Let's code</title>
+  <link rel="stylesheet" href="style.css?">
+</head>
+<body>
+  <div class="conteneur">
+   <h1>Toutes vos Tâches</h1> 
+  <ul>
+<?php
+$compteur = 1;
+
+
+  while( $resultat = $resultats->fetch() )
+{
+        echo "<li><form action='.' method='post'>Tâche ".$compteur.":  " .$resultat->action."<input id='img' type='image' name='supprimer' value='supp' src='img/del.png'/>
+        <input type='HIDDEN' name='id' value=".$resultat->id."/></form></li>";
+        $compteur++;
+}
+?>
+  </ul>
+  </div>
+  <br>
+<!--formulaire d'ajout-->
+  <div class="conteneur">
+    <form action="index.php" method="post" enctype="multipart/form-data">
+    <label>Ajouter :</label> <input type="text" name="todolist"/>
+    <input id="ajouter" name="ajouter" type="submit" value="Ajouter" />
+    <br><br>
+  </form>
+<!--  affichage du message retour utilisateur-->
+<?php
+{
+  echo "<p>". $info."</p>";
+}
+?>
+  </div>
+</body>
+</html>
