@@ -85,8 +85,7 @@ $compteur = 1;
   //2- On créer un bouton supprimer dans un formulaire ( sous forme d'image ) avec un champ caché qui contient l'id de la tâche. 
   while( $resultat = $resultats->fetch() )
 {
-        echo "<li><form action='.' method='post'>Tâche ".$compteur.":  " .$resultat->action."<input id='img' type='image' name='supprimer' value='supp' src='img/del.png'/>
-        <input type='HIDDEN' name='id' value=".$resultat->id."/></form></li>";
+        echo "<li><form action='.' method='post'>Tâche ".$compteur.":  " .$resultat->action."<input id='".$resultat->id."' type='image' class='img' name='supprimer' value='supp' src='img/del.png' onclick='delTask(this)'/>";
         $compteur++;
 }
 ?>
