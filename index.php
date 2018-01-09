@@ -41,7 +41,7 @@ $dbh = new PDO('mysql:host=localhost;dbname=web-student', $user, $pass); //conne
 
 if (isset ($_POST['ajouter']))
 {
-  $todo = $_POST['todolist'];
+  $todo = $_POST['params'];
 
   // Si l'un des champs est vide, lancer une erreur
   if (empty ($todo))
@@ -74,13 +74,13 @@ if (isset ($_POST['ajouter']))
   <title>Let's code</title>
   <link rel="stylesheet" href="style.css?">
 </head>
+<script type="text/javascript" src="add_task.js"></script>
 <body>
   <div class="conteneur">
    <h1>Toutes vos Tâches</h1> 
   <ul>
 <?php
 $compteur = 1;
-
   //1- On affiche toutes les tâches avec l'aide d'une boucle while. On récupère l'id et la tâche
   //2- On créer un bouton supprimer dans un formulaire ( sous forme d'image ) avec un champ caché qui contient l'id de la tâche. 
   while( $resultat = $resultats->fetch() )
@@ -95,11 +95,9 @@ $compteur = 1;
   <br>
 <!--formulaire d'ajout-->
   <div class="conteneur">
-    <form action="index.php" method="post" enctype="multipart/form-data">
-    <label>Ajouter :</label> <input type="text" name="todolist"/>
-    <input id="ajouter" name="ajouter" type="submit" value="Ajouter" />
+    <label>Ajouter :</label> <input type="textarea" id=tache name="todolist"/>
+    <button id="ajouter" onclick="addTask()">ajouter</button>
     <br><br>
-  </form>
 <!--  affichage du message retour utilisateur-->
 <?php
 {
