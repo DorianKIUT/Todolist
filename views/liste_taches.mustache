@@ -1,0 +1,31 @@
+<!doctype html>
+  <html lang="fr">
+    <head>
+          <meta charset="utf-8">
+          <script type="text/javascript" src="add_task.js"></script>
+          <link rel="stylesheet" href="style.css?">
+          <title>Let's code</title>
+ 
+    </head>
+
+    <body>
+            <div class="conteneur">
+                <h1>Toutes vos Tâches</h1> 
+                <ul>
+             {{# taches }}
+                        <li>
+                                {{action}}
+                                <img src="img/del.png" class="img" name=supprimer value=supp id="{{id}}" onclick="delTask(this)"></button>
+                        </li>
+             {{/ taches }}
+                </ul>
+            </div>
+            <br>
+            <!--formulaire d'ajout-->
+            <div class="conteneur">
+                <label>Ajouter :</label> <input type="textarea" id=tache name="todolist"/>
+                <button id="ajouter" onclick="addTask()">Ajouter</button>
+                <br><br>
+            </div>
+    </body>
+</html>
